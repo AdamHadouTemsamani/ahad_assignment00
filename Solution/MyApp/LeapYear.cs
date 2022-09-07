@@ -26,8 +26,6 @@ public class LeapYearClass
             }
         }
 
-
-
     }
 
     public static bool IsLeapYear(int year)
@@ -41,15 +39,15 @@ public class LeapYearClass
         //Check if divisble
         if (year % 4 == 0)
         {
-            return true;
-        }
-        if (year % 100 == 0)
-        {
-            if (year % 400 == 0)
+            if (year % 100 == 0)
             {
-                return true;
+                if (year % 400 == 0)
+                {
+                    return true;
+                }
+                    return false;
             }
-            return false;
+        return true;
         }
         return false;
     }
@@ -68,11 +66,6 @@ public class LeapYearClass
         
         return true;
     }
-
-
-
-
-
 
 }
 
