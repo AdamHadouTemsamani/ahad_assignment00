@@ -1,8 +1,8 @@
-using System;
+﻿using System;
 
 namespace LeapYear;
 
-public class LeapYear
+public class LeapYearClass
 {
 
 
@@ -13,16 +13,16 @@ public class LeapYear
         int result;
 
         if (isParsable(input))
-        {
+        {   
             result = Convert.ToInt32(input);
 
             if (IsLeapYear(result))
             {
-                Console.WriteLine("Yay");
+                Console.WriteLine("yay");
             }
             else
             {
-                Console.WriteLine("Nay");
+                Console.WriteLine("nay");
             }
         }
 
@@ -30,7 +30,7 @@ public class LeapYear
 
     }
 
-    static bool IsLeapYear(int year)
+    public static bool IsLeapYear(int year)
     {
         //Should always return false
         if (year < 1582)
@@ -54,17 +54,18 @@ public class LeapYear
         return false;
     }
 
-    static bool isParsable(string input)
+    public static bool isParsable(string input)
     {
-        int a;
         try
         {
-            int.TryParse(input, out a);
+            Convert.ToInt32(input);
         }
         catch (FormatException)
         {
             Console.WriteLine($"Unable to parse '{input}'");
+            return false;
         }
+        
         return true;
     }
 
