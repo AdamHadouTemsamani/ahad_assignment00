@@ -68,7 +68,7 @@ public class LeapYearTests
         // Arrange
             string input = "1000";
         // Act
-            var result = LeapYearClass.isParsable(input);
+            var result = LeapYearClass.IsParsable(input);
 
         // Assert
             result.Should().Be(true);
@@ -81,7 +81,7 @@ public class LeapYearTests
             string input = "Hello";
             
         // Act
-            var result = LeapYearClass.isParsable(input);
+            var result = LeapYearClass.IsParsable(input);
         
         // Assert
             result.Should().Be(false);

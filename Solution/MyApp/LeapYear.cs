@@ -12,7 +12,7 @@ public class LeapYearClass
         string input = Console.ReadLine();
         int result;
 
-        if (isParsable(input))
+        if (IsParsable(input))
         {   
             result = Convert.ToInt32(input);
 
@@ -52,7 +52,7 @@ public class LeapYearClass
         return false;
     }
 
-    public static bool isParsable(string input)
+    public static bool IsParsable(string input)
     {
         try
         {
